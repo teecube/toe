@@ -1,0 +1,7 @@
+.classpath
+.project
+.settings/
+target/
+toe-domains/
+toe-installer/
+git*.sh
