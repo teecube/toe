@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>io.teecube</groupId>
+		<artifactId>t3</artifactId>
+		<version>0.0.1</version>
+	</parent>
+
+	<groupId>io.teecube.toe</groupId>
+	<artifactId>toe</artifactId>
+	<version>0.0.2-SNAPSHOT</version>
+
+	<packaging>pom</packaging>
+
+	<name>${ecosystemName} - ${toeName}</name>
+	<description>${toeName} stands for ${toeFullName} and is used to install TIBCO products and configure TIBCO domains in a cloud-enabled way.</description>
+
+	<url>${siteDisplayURL}/${toeURLBase}</url>
+	<distributionManagement>
+		<site>
+			<id>t3.site</id>
+			<url>${siteUploadProtocol}${siteUploadURL}/${toeURLBase}</url>
+		</site>
+	</distributionManagement>
+
+	<properties>
+		<siteTopCaption>${toeDisplayedName}</siteTopCaption>
+		<siteTopLink />
+	</properties>
+
+	<profiles>
+	    <profile>
+			<id>release-profile</id>
+			<activation>
+				<!-- activation is triggered by maven-release-plugin -->
+				<property>
+					<name>performRelease</name>
+					<value>true</value>
+				</property>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.google.code.maven-replacer-plugin</groupId>
+						<artifactId>replacer</artifactId>
+						<configuration>
+							<replacements>
+								<replacement>
+									<token>&lt;url&gt;\$\{site.*&lt;/url&gt;</token>
+									<value>&lt;url&gt;${project.url}&lt;/url&gt;</value>
+								</replacement>
+								<replacement>
+									<token>&lt;name&gt;\$\{.*&lt;/name&gt;</token>
+									<value>&lt;name&gt;${project.name}&lt;/name&gt;</value>
+								</replacement>
+								<replacement>
+									<token>&lt;description&gt;\$\{.*&lt;/description&gt;</token>
+									<value>&lt;description&gt;${project.description}&lt;/description&gt;</value>
+								</replacement>
+							</replacements>
+						</configuration>
+					</plugin>
+				</plugins>
+            </build>
+		</profile>
+	</profiles>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>io.teecube.t3</groupId>
+				<artifactId>t3-site-enhancer</artifactId>
+				<configuration>
+					<extendedSidebars>
+						<extendedSidebar>disabled</extendedSidebar>
+					</extendedSidebars>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<reportSets>
+					<reportSet>
+						<id>non-aggregate</id>
+						<reports>
+							<report>license</report>
+							<report>scm</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+		</plugins>
+	</reporting>
+
+	<scm>
+		<connection>scm:git:https://git.teecu.be/teecube/toe.git</connection>
+		<developerConnection>scm:git:https://git.teecu.be/teecube/toe.git</developerConnection>
+		<url>https://git.teecu.be/teecube/toe</url>
+		<tag>HEAD</tag>
+	</scm>
+
+</project>
