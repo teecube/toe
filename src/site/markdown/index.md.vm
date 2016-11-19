@@ -1,0 +1,21 @@
+#set($h1 = '#')
+#set($h2 = '##')
+#set($h3 = '###')
+#set($h4 = '####')
+
+${toeDisplayedName} is an exclusive concept of ${ecosystemNameHighlight}
+enabling cloud-based operations on TIBCO products and applications.
+
+---
+
+$h1 ${toeDisplayedName} - ${toeDisplayedInstallerName}
+
+The ${toeDisplayedName} - ${toeDisplayedInstallerName} is a Maven plugin to
+simply perform TIBCO products installations.
+<div>[Learn more »](${siteDisplayURL}/${toeInstallerURLBase}/index.html)</div>
+
+$h1 ${toeDisplayedName} - ${toeDisplayedDomainsName}
+
+The ${toeDisplayedName} - ${toeDisplayedDomainsName} is a Maven plugin to create
+and manage TIBCO domains.
+<div>[Learn more »](${siteDisplayURL}/${toeDomainsURLBase}/index.html)</div>
