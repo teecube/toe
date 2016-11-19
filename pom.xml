@@ -10,7 +10,7 @@
 
 	<groupId>io.teecube.toe</groupId>
 	<artifactId>toe</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 
 	<packaging>pom</packaging>
 
@@ -101,7 +101,7 @@
 		<connection>scm:git:https://git.teecu.be/teecube/toe.git</connection>
 		<developerConnection>scm:git:https://git.teecu.be/teecube/toe.git</developerConnection>
 		<url>https://git.teecu.be/teecube/toe</url>
-		<tag>toe/0.0.1</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 </project>
