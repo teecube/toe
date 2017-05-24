@@ -14,10 +14,10 @@
 
 	<packaging>pom</packaging>
 
-	<name>${ecosystemName} - ${toeName}</name>
-	<description>${toeName} stands for ${toeFullName} and is used to install TIBCO products and configure TIBCO domains in a cloud-enabled way.</description>
+	<name>${projectName}</name> <!-- unleash: 2=<name>${projectName}</name> 3=<name>&#36;{projectName}</name> -->
+	<description>${projectDescription}</description> <!-- unleash: 2=<description>${projectDescription}</description> 3=<description>&#36;{projectDescription}</description> -->
 
-	<url>${siteDisplayURL}/${toeURLBase}</url>
+	<url>${siteDisplayURL}/${toeURLBase}</url> <!-- unleash: 2=<url>${siteDisplayURL}/${toeURLBase}</url> 3=<url>&#36;{siteDisplayURL}/&#36;{toeURLBase}</url> -->
 	<distributionManagement>
 		<site>
 			<id>t3.site</id>
@@ -26,46 +26,12 @@
 	</distributionManagement>
 
 	<properties>
+		<projectName>${ecosystemName} - ${toeName}</projectName>
+		<projectDescription>${toeName} stands for ${toeFullName} and is used to install TIBCO products and configure TIBCO domains in a cloud-enabled way.</projectDescription>
 		<siteTopCaption>${toeDisplayedName}</siteTopCaption>
 		<siteTopLink />
 	</properties>
 
-	<profiles>
-	    <profile>
-			<id>release-profile</id>
-			<activation>
-				<!-- activation is triggered by maven-release-plugin -->
-				<property>
-					<name>performRelease</name>
-					<value>true</value>
-				</property>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>com.google.code.maven-replacer-plugin</groupId>
-						<artifactId>replacer</artifactId>
-						<configuration>
-							<replacements>
-								<replacement>
-									<token>&lt;url&gt;\$\{site.*&lt;/url&gt;</token>
-									<value>&lt;url&gt;${project.url}&lt;/url&gt;</value>
-								</replacement>
-								<replacement>
-									<token>&lt;name&gt;\$\{.*&lt;/name&gt;</token>
-									<value>&lt;name&gt;${project.name}&lt;/name&gt;</value>
-								</replacement>
-								<replacement>
-									<token>&lt;description&gt;\$\{.*&lt;/description&gt;</token>
-									<value>&lt;description&gt;${project.description}&lt;/description&gt;</value>
-								</replacement>
-							</replacements>
-						</configuration>
-					</plugin>
-				</plugins>
-            </build>
-		</profile>
-	</profiles>
 	<build>
 		<plugins>
 			<plugin>
