@@ -16,7 +16,7 @@
 	<name>${projectName}</name> <!-- unleash: 2=<name>${projectName}</name> 3=<name>&#36;{projectName}</name> -->
 	<description>${projectDescription}</description> <!-- unleash: 2=<description>${projectDescription}</description> 3=<description>&#36;{projectDescription}</description> -->
 
-	<url>${siteDisplayURL}/${toeURLBase}</url> <!-- unleash: 2=<url>${siteDisplayURL}/${toeURLBase}</url> 3=<url>&#36;{siteDisplayURL}/&#36;{toeURLBase}</url> -->
+	<url>${siteTopLink}</url> <!-- unleash: 2=<url>${siteTopLink}</url> 3=<url>&#36;{siteTopLink}</url> -->
 	<distributionManagement>
 		<site>
 			<id>t3.site</id>
@@ -28,7 +28,7 @@
 		<projectName>${ecosystemName} - ${toeName}</projectName>
 		<projectDescription>${toeName} stands for ${toeFullName} and is used to install TIBCO products and configure TIBCO domains in a cloud-enabled way.</projectDescription>
 		<siteTopCaption>${toeDisplayedName}</siteTopCaption>
-		<siteTopLink/>
+		<siteTopLink>${siteDisplayURL}/${toeURLBase}</siteTopLink>
 	</properties>
 
 	<build>
