@@ -9,14 +9,14 @@
 
 	<groupId>io.teecube.toe</groupId>
 	<artifactId>toe</artifactId>
-	<version>0.0.13-SNAPSHOT</version>
+	<version>0.0.12</version>
 
 	<packaging>pom</packaging>
 
-	<name>${projectName}</name> <!-- unleash: 2=<name>${projectName}</name> 3=<name>&#36;{projectName}</name> -->
-	<description>${projectDescription}</description> <!-- unleash: 2=<description>${projectDescription}</description> 3=<description>&#36;{projectDescription}</description> -->
+	<name>T³ - TOE</name> <!-- unleash: 2=<name>${projectName}</name> 3=<name>&#36;{projectName}</name> -->
+	<description>TOE stands for Topology and Orchestration Extensions and is used to install TIBCO products and configure TIBCO domains in a cloud-enabled way.</description> <!-- unleash: 2=<description>${projectDescription}</description> 3=<description>&#36;{projectDescription}</description> -->
 
-	<url>${siteTopLink}</url> <!-- unleash: 2=<url>${siteTopLink}</url> 3=<url>&#36;{siteTopLink}</url> -->
+	<url>https://teecu.be/t3/0.0.13//../toe/${toeVersion}</url> <!-- unleash: 2=<url>${siteTopLink}</url> 3=<url>&#36;{siteTopLink}</url> -->
 	<distributionManagement>
 		<site>
 			<id>t3.site</id>
@@ -86,7 +86,7 @@
 		<connection>scm:git:https://git.teecu.be/teecube/toe.git</connection>
 		<developerConnection>scm:git:https://git.teecu.be/teecube/toe.git</developerConnection>
 		<url>https://git.teecu.be/teecube/toe</url>
-		<tag>HEAD</tag>
+		<tag>v0.0.12</tag>
 	</scm>
 
 </project>
