@@ -1,4 +1,5 @@
 storeScmRevision
+updateParentVersionToLatest
 checkProjectVersions
 checkParentVersions
 prepareVersions
