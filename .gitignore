@@ -1,7 +1,10 @@
+# Eclipse
 .classpath
 .project
 .settings/
+# IntelliJ
+.idea
+# Maven
 target/
-toe-domains/
-toe-installer/
+# Misc
 git*.sh
