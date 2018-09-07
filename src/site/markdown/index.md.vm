@@ -12,10 +12,12 @@ $h1 ${toeDisplayedName} - ${toeDisplayedInstallerName}
 
 The ${toeDisplayedName} - ${toeDisplayedInstallerName} is a Maven plugin to
 simply perform TIBCO products installations.
-<div>[Learn more »](${siteDisplayURL}/${toeInstallerURLBase}/index.html)</div>
+
+[Learn more »](${siteDisplayURL}/${toeInstallerURLBase}/index.html)
 
 $h1 ${toeDisplayedName} - ${toeDisplayedDomainsName}
 
 The ${toeDisplayedName} - ${toeDisplayedDomainsName} is a Maven plugin to create
 and manage TIBCO domains.
-<div>[Learn more »](${siteDisplayURL}/${toeDomainsURLBase}/index.html)</div>
+
+[Learn more »](${siteDisplayURL}/${toeDomainsURLBase}/index.html)
