@@ -46,7 +46,7 @@
 				<groupId>com.itemis.maven.plugins</groupId>
 				<artifactId>unleash-maven-plugin</artifactId>
 				<configuration>
-					<workflowDescriptor>${project.basedir}/src/main/unleash/workflow</workflowDescriptor>
+					<!--<workflowDescriptor>${project.basedir}/src/main/unleash/workflow</workflowDescriptor>-->
 				</configuration>
 			</plugin>
 		</plugins>
